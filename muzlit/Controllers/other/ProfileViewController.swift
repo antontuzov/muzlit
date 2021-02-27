@@ -25,7 +25,6 @@ class ProfileViewController: UIViewController {
             switch result {
             case.success(let model):
                break
-        
             case .failure(let error):
                 print(error.localizedDescription)
             }

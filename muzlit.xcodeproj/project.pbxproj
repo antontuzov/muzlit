@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,6 +25,8 @@
 		B5B0487725E78855006D2DCB /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0487625E78855006D2DCB /* Artist.swift */; };
 		B5B0487A25E7886F006D2DCB /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0487925E7886F006D2DCB /* UserProfile.swift */; };
 		B5B0487E25E788EA006D2DCB /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B0487D25E788EA006D2DCB /* TabBarViewController.swift */; };
+		B5BE826325EA5E37003A3444 /* APIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE826225EA5E37003A3444 /* APIImage.swift */; };
+		B5BE826625EA6782003A3444 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BE826525EA6782003A3444 /* SettingsModels.swift */; };
 		B5EFFED225E77E2A00087526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFFED125E77E2A00087526 /* AppDelegate.swift */; };
 		B5EFFED425E77E2A00087526 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFFED325E77E2A00087526 /* SceneDelegate.swift */; };
 		B5EFFED625E77E2A00087526 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFFED525E77E2A00087526 /* HomeViewController.swift */; };
@@ -53,6 +55,8 @@
 		B5B0487625E78855006D2DCB /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		B5B0487925E7886F006D2DCB /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		B5B0487D25E788EA006D2DCB /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B5BE826225EA5E37003A3444 /* APIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIImage.swift; sourceTree = "<group>"; };
+		B5BE826525EA6782003A3444 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		B5EFFECE25E77E2A00087526 /* muzlit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = muzlit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFFED125E77E2A00087526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFFED325E77E2A00087526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +88,6 @@
 				CF3E6575F0CBFD7F06447F8D /* Pods-muzlit.debug.xcconfig */,
 				EBBC5C01CE2943653B1B64CB /* Pods-muzlit.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +180,8 @@
 				B5B0487625E78855006D2DCB /* Artist.swift */,
 				B5B0487925E7886F006D2DCB /* UserProfile.swift */,
 				B5F2D42625E7E3BE0036F64A /* AuthResponse.swift */,
+				B5BE826225EA5E37003A3444 /* APIImage.swift */,
+				B5BE826525EA6782003A3444 /* SettingsModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,8 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EFFED625E77E2A00087526 /* HomeViewController.swift in Sources */,
+				B5BE826325EA5E37003A3444 /* APIImage.swift in Sources */,
 				B5B0486825E78766006D2DCB /* AuthManager.swift in Sources */,
 				B5B0485625E78623006D2DCB /* WelcomeViewController.swift in Sources */,
+				B5BE826625EA6782003A3444 /* SettingsModels.swift in Sources */,
 				B5B0485C25E78680006D2DCB /* ProfileViewController.swift in Sources */,
 				B5EFFED225E77E2A00087526 /* AppDelegate.swift in Sources */,
 				B5B0484A25E784E5006D2DCB /* LibraryViewController.swift in Sources */,
