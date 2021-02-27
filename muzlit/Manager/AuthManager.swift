@@ -208,13 +208,13 @@ final class AuthManager {
     private func cacheToken(result: AuthResponse) {
         UserDefaults.standard.setValue(result.access_token,
                                        forKey: "access_token")
-//        if let refresh_token = result.refresh_token
-//       {
-//        UserDefaults.standard.setValue(refresh_token,
-//                                           forKey: "refresh_token")
-//        }
+        if let refresh_token = result.refresh_token
+       {
+        UserDefaults.standard.setValue(refresh_token,
+                                           forKey: "refresh_token")
+        }
         
-        UserDefaults.standard.setValue(result, forKey: "refresh_token")
+//        UserDefaults.standard.setValue(result, forKey: "refresh_token")
         
         UserDefaults.standard.setValue(Date().addingTimeInterval(TimeInterval(result.expires_in)),
                                        forKey: "expirationDate")
