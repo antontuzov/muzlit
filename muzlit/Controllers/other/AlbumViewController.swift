@@ -1,22 +1,25 @@
 //
-//  PlayListViewController.swift
+//  AlbumViewController.swift
 //  muzlit
 //
-//  Created by turbo on 25.02.2021.
+//  Created by turbo on 02.03.2021.
 //
 
 import UIKit
 
-class PlaylistViewController: UIViewController {
+class AlbumViewController: UIViewController {
 
     
     
-    private let playlist: Playlist
     
     
     
-    init(playlist:  Playlist) {
-           self.playlist = playlist
+    private let album: Album
+    
+    
+    
+    init(album: Album) {
+           self.album = album
            super.init(nibName: nil, bundle: nil)
        }
 
@@ -34,9 +37,5 @@ class PlaylistViewController: UIViewController {
     
 
     
-    
-    
-    
-    
-    
+
 }
