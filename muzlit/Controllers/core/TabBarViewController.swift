@@ -21,7 +21,7 @@ class TabBarViewController: UITabBarController {
 
         let homeVC = HomeViewController()
         let searchVC = SearchViewController()
-        let libraryVC = LibraryPlaylistsViewController()
+        let libraryVC = LibraryViewController()
         
         homeVC.title = "Home"
         searchVC.title = "Search"
