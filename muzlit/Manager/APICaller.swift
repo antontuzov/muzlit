@@ -11,7 +11,7 @@ import Foundation
 final class APICaller {
     static let shared = APICaller()
 
-    private init() {}
+    private init() {} 
 
     struct Constants {
         static let baseAPIURL = "https://api.spotify.com/v1"
