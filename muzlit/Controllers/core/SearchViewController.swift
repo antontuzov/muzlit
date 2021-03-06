@@ -5,8 +5,8 @@
 //  Created by turbo on 25.02.2021.
 //
 
-import UIKit
 import SafariServices
+import UIKit
 
 class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchBarDelegate {
 
