@@ -2,7 +2,7 @@
 //  WelcomeViewController.swift
 //  muzlit
 //
-//  Created by turbo on 25.02.2021.
+//  Created by Anton Tuzov on 25.02.2021.
 //
 
 import UIKit
@@ -12,24 +12,53 @@ class WelcomeViewController: UIViewController {
     
     private let signInButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .white
+        button.backgroundColor = .systemBlue
         button.setTitle("Sign In with Muzlit", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 8
         
         return button
     }()
     
     
     
-    
+    private let imageView: UIImageView = {
+           let imageView = UIImageView()
+           imageView.contentMode = .scaleAspectFill
+           imageView.image = UIImage(named: "albums")
+           return imageView
+       }()
+
+       private let overlayView: UIView = {
+           let view = UIView()
+           view.backgroundColor = .white
+           view.alpha = 0.2
+           return view
+       }()
+
+       private let logoImageView: UIImageView = {
+           let imageView = UIImageView(image: UIImage(named: "logo"))
+           imageView.contentMode = .scaleAspectFit
+           return imageView
+       }()
+
+       private let label: UILabel = {
+           let label = UILabel()
+           label.numberOfLines = 0
+           label.textAlignment = .center
+           label.textColor = .white
+           label.font = .systemFont(ofSize: 32, weight: .semibold)
+           label.text = "Listen to Millions\nof Songs on\nthe go."
+           return label
+       }()
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         title = "Muzlit"
-        view.backgroundColor = .systemBlue
+        view.addSubview(imageView)
+        view.addSubview(overlayView)
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
         
@@ -38,6 +67,8 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        imageView.frame = view.bounds
+        overlayView.frame = view.bounds
         signInButton.frame = CGRect(x: 20, y: view.height-50-view.safeAreaInsets.bottom,
                                     width: view.width-40,
                                     height: 50)

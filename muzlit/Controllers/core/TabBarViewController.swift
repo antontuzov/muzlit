@@ -8,12 +8,7 @@
 import UIKit
 
 class TabBarViewController: UITabBarController {
-
-//
-//    let homeVC = UIImage(systemName: "music.note.house")
-//    let searchVC = UIImage(systemName: "doc.text.magnifyingglass")
-//    let LIbraryVC = UIImage(systemName: "music.note.list")
-    
+ 
     
     
     override func viewDidLoad() {

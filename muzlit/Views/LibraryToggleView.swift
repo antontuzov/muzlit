@@ -39,7 +39,7 @@ class LibraryToggleView: UIView {
 
     private let indicatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .systemBlue
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 4
         return view
@@ -60,7 +60,7 @@ class LibraryToggleView: UIView {
 
     @objc private func didTapPlaylists() {
         state = .playlist
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.0) {
             self.layoutIndicator()
         }
         delegate?.libraryToggleViewDidTapPlaylists(self)
@@ -68,7 +68,7 @@ class LibraryToggleView: UIView {
 
     @objc private func didTapAlbums() {
         state = .album
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.0) {
             self.layoutIndicator()
         }
         delegate?.libraryToggleViewDidTapAlbums(self)

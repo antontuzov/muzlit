@@ -2,7 +2,7 @@
 //  PlayerControlsView.swift
 //  muzlit
 //
-//  Created by turbo on 05.03.2021.
+//  Created by Anton Tuzov  on 05.03.2021.
 //
 import Foundation
 import UIKit
@@ -27,13 +27,13 @@ final class PlayerControlsView: UIView {
 
     weak var delegate: PlayerControlsViewDelegate?
 
-    private let volumeSlider: UISlider = {
+    lazy var  volumeSlider: UISlider = {
         let slider = UISlider()
         slider.value = 0.5
         return slider
     }()
 
-    private let nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.text = "This Is My Song"
         label.numberOfLines = 1
@@ -41,7 +41,7 @@ final class PlayerControlsView: UIView {
         return label
     }()
 
-    private let subtitleLabel: UILabel = {
+    lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.text = "Drake (feat. Some Other Artist)"
         label.numberOfLines = 1
@@ -50,7 +50,7 @@ final class PlayerControlsView: UIView {
         return label
     }()
 
-    private let backButton: UIButton = {
+    lazy var  backButton: UIButton = {
         let button = UIButton()
         button.tintColor = .label
         let image = UIImage(systemName: "backward.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
@@ -58,7 +58,7 @@ final class PlayerControlsView: UIView {
         return button
     }()
 
-    private let nextButton: UIButton = {
+    lazy var  nextButton: UIButton = {
         let button = UIButton()
         button.tintColor = .label
         let image = UIImage(systemName: "forward.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))
@@ -66,7 +66,7 @@ final class PlayerControlsView: UIView {
         return button
     }()
 
-    private let playPauseButton: UIButton = {
+    lazy var  playPauseButton: UIButton = {
         let button = UIButton()
         button.tintColor = .label
         let image = UIImage(systemName: "pause", withConfiguration: UIImage.SymbolConfiguration(pointSize: 34, weight: .regular))

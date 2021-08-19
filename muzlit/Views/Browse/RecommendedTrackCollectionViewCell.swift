@@ -2,7 +2,7 @@
 //  RecommendedTrackCollectionViewCell.swift
 //  muzlit
 //
-//  Created by turbo on 01.03.2021.
+//  Created by Anton Tuzov  on 01.03.2021.
 //
 
 import UIKit
@@ -10,21 +10,23 @@ import UIKit
 class RecommendedTrackCollectionViewCell: UICollectionViewCell {
     static let identifier = "RecommendedTrackCollectionViewCell"
     
-    private let albumCoverImageView: UIImageView = {
-           let imageView = UIImageView()
-           imageView.image = UIImage(systemName: "photo")
-           imageView.contentMode = .scaleAspectFill
-           return imageView
+      lazy var albumCoverImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 15
+        imageView.image = UIImage(systemName: "photo")
+        imageView.contentMode = .scaleAspectFill
+        return imageView
        }()
 
-       private let trackNameLabel: UILabel = {
+       lazy var  trackNameLabel: UILabel = {
            let label = UILabel()
            label.numberOfLines = 0
            label.font = .systemFont(ofSize: 18, weight: .regular)
            return label
        }()
 
-       private let artistNameLabel: UILabel = {
+       lazy var  artistNameLabel: UILabel = {
            let label = UILabel()
            label.numberOfLines = 0
            label.font = .systemFont(ofSize: 15, weight: .thin)
@@ -33,7 +35,7 @@ class RecommendedTrackCollectionViewCell: UICollectionViewCell {
 
        override init(frame: CGRect) {
            super.init(frame: frame)
-           backgroundColor = .secondarySystemBackground
+           backgroundColor = .white
            contentView.backgroundColor = .secondarySystemBackground
            contentView.addSubview(albumCoverImageView)
            contentView.addSubview(trackNameLabel)

@@ -2,7 +2,7 @@
 //  AuthManager.swift
 //  muzlit
 //
-//  Created by turbo on 25.02.2021.
+//  Created by Anton Tuzov on 25.02.2021.
 //
 
 
@@ -19,10 +19,14 @@ final class AuthManager {
         static let clientID = "d103c0878789437a912080354309ab99"
         static let clientSecret = "212d7352a0674902be9651322b760ce1"
         static let tokenAPIURL = "https://accounts.spotify.com/api/token"
-        static let redirectURI = "https://www.iosacademy.io"
+        static let redirectURI = "https://www.me.io"
         static let scopes = "user-read-private%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20user-follow-read%20user-library-modify%20user-library-read%20user-read-email"
     }
+ 
+    
 
+    
+    
     private init() {}
 
     public var signInURL: URL? {

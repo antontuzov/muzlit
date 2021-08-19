@@ -70,7 +70,7 @@ final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {
      
     private func setdescriptionLabel() {
         addSubview(descriptionLabel)
-        descriptionLabel.numberOfLines = 0
+        descriptionLabel.numberOfLines = 1
         descriptionLabel.textColor = .secondaryLabel
         descriptionLabel.font = .systemFont(ofSize: 18, weight: .regular)
 //        descriptionLabel.frame = CGRect(x: 10, y: nameLabel.bottom, width: width-20, height: 44)
@@ -94,7 +94,7 @@ final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {
     
     private func  setplayAllButton() {
         addSubview(playAllButton)
-        playAllButton.backgroundColor = .systemGreen
+        playAllButton.backgroundColor = .systemBlue
         playAllButton.tintColor = .white
         playAllButton.layer.masksToBounds = true
         playAllButton.layer.cornerRadius = 30
@@ -109,11 +109,11 @@ final class PlaylistHeaderCollectionReusableView: UICollectionReusableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let imageSize: CGFloat = height/1.6
-        imageView.frame = CGRect(x: (width-imageSize)/2, y: 30, width: imageSize, height: imageSize)
+        imageView.frame = CGRect(x: (width-imageSize)/3.0, y: 30, width: imageSize, height: imageSize)
 
-         nameLabel.frame = CGRect(x: 10, y: imageView.bottom, width: width-20, height: 44)
-        descriptionLabel.frame = CGRect(x: 10, y: nameLabel.bottom, width: width-20, height: 44)
-        ownerLabel.frame = CGRect(x: 10, y: descriptionLabel.bottom, width: width-20, height: 44)
+         nameLabel.frame = CGRect(x: 10, y: imageView.bottom, width: width-20, height: 40)
+        descriptionLabel.frame = CGRect(x: 10, y: nameLabel.bottom, width: width-100, height: 40)
+        ownerLabel.frame = CGRect(x: 10, y: descriptionLabel.bottom, width: width-20, height: 40)
 
         playAllButton.frame = CGRect(x: width-80, y: height-80, width: 60, height: 60)
     }

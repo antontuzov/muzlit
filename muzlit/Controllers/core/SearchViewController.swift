@@ -65,7 +65,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         collectionView.dataSource = self
         collectionView.backgroundColor = .systemBackground
 
-        APICaller.shared.getCategories { [weak self] result in
+        APIBase.shared.getCategories { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let categories):
@@ -91,7 +91,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating, UISearchB
         }
         resultsController.delegate = self
 
-        APICaller.shared.search(with: query) { result in
+        APIBase.shared.search(with: query) { result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let results):
@@ -161,7 +161,7 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        HapticsManager.shared.vibrateForSelection()
+        HapManager.shared.vibrateForSelection()
         let category = categories[indexPath.row]
         let vc = CategoryViewController(category: category)
         vc.navigationItem.largeTitleDisplayMode = .never

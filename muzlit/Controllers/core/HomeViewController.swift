@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Browse"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .white
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gear"),
             style: .done,
@@ -100,7 +100,7 @@ class HomeViewController: UIViewController {
             DispatchQueue.main.async {
                 let vc = LibraryPlaylistsViewController()
                 vc.selectionHandler = { playlist in
-                    APICaller.shared.addTrackToPlaylist(
+                    APIBase.shared.addTrackToPlaylist(
                         track: model,
                         playlist: playlist
                     ) { success in
@@ -146,7 +146,7 @@ class HomeViewController: UIViewController {
         var recommendations: RecommendationsResponse?
 
         // New Releases
-        APICaller.shared.getNewReleases { result in
+        APIBase.shared.getNewReleases { result in
             defer {
                 group.leave()
             }
@@ -159,7 +159,7 @@ class HomeViewController: UIViewController {
         }
 
         // Featured Playlists
-        APICaller.shared.getFeaturedPlaylists { result in
+        APIBase.shared.getFeaturedPlaylists { result in
             defer {
                 group.leave()
             }
@@ -174,7 +174,7 @@ class HomeViewController: UIViewController {
         }
 
         // Recommended Tracks
-        APICaller.shared.gerRecommendedGenres { result in
+        APIBase.shared.gerRecommendedGenres { result in
             switch result {
             case .success(let model):
                 let genres = model.genres
@@ -185,7 +185,7 @@ class HomeViewController: UIViewController {
                     }
                 }
 
-                APICaller.shared.getRecommendations(genres: seeds) { recommendedResult in
+                APIBase.shared.getRecommendations(genres: seeds) { recommendedResult in
                     defer {
                         group.leave()
                     }
@@ -315,7 +315,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        HapticsManager.shared.vibrateForSelection()
+        HapManager.shared.vibrateForSelection()
         let section = sections[indexPath.section]
         switch section {
         case .featuredPlaylists:

@@ -2,7 +2,7 @@
 //  AlbumViewController.swift
 //  muzlit
 //
-//  Created by turbo on 02.03.2021.
+//  Created by Anton Tuzov on 02.03.2021.
 //
 
 import UIKit
@@ -86,13 +86,13 @@ class AlbumViewController: UIViewController {
         actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         actionSheet.addAction(UIAlertAction(title: "Save Album", style: .default, handler: { [weak self] _ in
             guard let strongSelf = self else { return }
-            APICaller.shared.saveAlbum(album: strongSelf.album) { success in
+            APIBase.shared.saveAlbum(album: strongSelf.album) { success in
                 if success {
-                    HapticsManager.shared.vibrate(for: .success)
+                    HapManager.shared.vibrate(for: .success)
 //                    NotificationCenter.default.post(name: .albumSavedNotification, object: nil)
                 }
                 else {
-                    HapticsManager.shared.vibrate(for: .error)
+                    HapManager.shared.vibrate(for: .error)
                 }
             }
         }))
@@ -101,7 +101,7 @@ class AlbumViewController: UIViewController {
     }
 
     func fetchData() {
-        APICaller.shared.getAlbumDetails(for: album) { [weak self] result in
+        APIBase.shared.getAlbumDetails(for: album) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let model):

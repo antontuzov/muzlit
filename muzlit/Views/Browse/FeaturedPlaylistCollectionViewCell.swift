@@ -2,7 +2,7 @@
 //  FeaturedPlaylistCollectionViewCell.swift
 //  muzlit
 //
-//  Created by turbo on 01.03.2021.
+//  Created by Anton Tuzov  on 01.03.2021.
 //
 
 import UIKit
@@ -11,16 +11,16 @@ import UIKit
 class FeaturedPlaylistCollectionViewCell: UICollectionViewCell {
     static let identifier = "FeaturedPlaylistCollectionViewCell"
     
-    private let playlistCoverImageView: UIImageView = {
+      lazy var  playlistCoverImageView: UIImageView = {
             let imageView = UIImageView()
             imageView.layer.masksToBounds = true
-            imageView.layer.cornerRadius = 4
+            imageView.layer.cornerRadius = 15
             imageView.image = UIImage(systemName: "photo")
             imageView.contentMode = .scaleAspectFill
             return imageView
         }()
 
-        private let playlistNameLabel: UILabel = {
+      lazy var playlistNameLabel: UILabel = {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .center
@@ -28,11 +28,11 @@ class FeaturedPlaylistCollectionViewCell: UICollectionViewCell {
             return label
         }()
 
-        private let creatorNameLabel: UILabel = {
+        lazy var  creatorNameLabel: UILabel = {
             let label = UILabel()
             label.numberOfLines = 0
             label.textAlignment = .center
-            label.font = .systemFont(ofSize: 15, weight: .thin)
+            label.font = .systemFont(ofSize: 13, weight: .bold)
             return label
         }()
 

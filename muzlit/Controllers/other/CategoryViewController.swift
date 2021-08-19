@@ -2,7 +2,7 @@
 //  CategoryViewController.swift
 //  muzlit
 //
-//  Created by turbo on 05.03.2021.
+//  Created by Anton Tuzov on 05.03.2021.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ class CategoryViewController: UIViewController {
     
     let category: Category
 
-    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { _, _ -> NSCollectionLayoutSection? in
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewCompositionalLayout(sectionProvider: { _, _ -> NSCollectionLayoutSection? in
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
 
         item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
@@ -34,10 +34,12 @@ class CategoryViewController: UIViewController {
         self.category = category
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
-        fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
+    
+  
 
     private var playlists = [Playlist]()
 
@@ -55,7 +57,7 @@ class CategoryViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        APICaller.shared.getCategoryPlaylists(category: category) { [weak self] result in
+        APIBase.shared.getCategoryPlaylists(category: category) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let playlists):
