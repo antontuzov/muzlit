@@ -6,8 +6,8 @@ Full featured Spotify like app written in Swift 5 with MVVM architecture.
 
 <p align="center">
   <img src="Arts/fill1.gif" height="400">
-  <img src="Arts/Muz1.giff" height="400">
-  <img src="Arts/Muz12.giff" height="400">
+  <img src="Arts/Muz1.giff" height="500">
+  <img src="Arts/Muz12.giff" height="500">
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
