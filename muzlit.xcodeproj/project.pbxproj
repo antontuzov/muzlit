@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28A8B4DA26B4C47DC41A3D09 /* Pods_muzlit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DC5C34B7B16523F21B1AEA4 /* Pods_muzlit.framework */; };
+		B503AA4626CE576B001CDD68 /* Arts in Resources */ = {isa = PBXBuildFile; fileRef = B503AA4526CE576B001CDD68 /* Arts */; };
 		B510E80D25F20B2A009B3F35 /* SearchResultDefaultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510E80C25F20B2A009B3F35 /* SearchResultDefaultTableViewCell.swift */; };
 		B510E81225F20C00009B3F35 /* SearchResultSubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510E81125F20C00009B3F35 /* SearchResultSubtitleTableViewCell.swift */; };
 		B510E81725F21F4C009B3F35 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B510E81625F21F4C009B3F35 /* CategoryCollectionViewCell.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		3DC5C34B7B16523F21B1AEA4 /* Pods_muzlit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_muzlit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B503AA4526CE576B001CDD68 /* Arts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Arts; sourceTree = "<group>"; };
 		B510E80C25F20B2A009B3F35 /* SearchResultDefaultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultDefaultTableViewCell.swift; sourceTree = "<group>"; };
 		B510E81125F20C00009B3F35 /* SearchResultSubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultSubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		B510E81625F21F4C009B3F35 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 		B5EFFEC525E77E2A00087526 = {
 			isa = PBXGroup;
 			children = (
+				B503AA4526CE576B001CDD68 /* Arts */,
 				B5EFFED025E77E2A00087526 /* muzlit */,
 				B5EFFECF25E77E2A00087526 /* Products */,
 				5D6E51214C725FA46DF24222 /* Pods */,
@@ -417,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B503AA4626CE576B001CDD68 /* Arts in Resources */,
 				B5EFFEDE25E77E2B00087526 /* LaunchScreen.storyboard in Resources */,
 				B5EFFEDB25E77E2B00087526 /* Assets.xcassets in Resources */,
 			);
