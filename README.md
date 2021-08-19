@@ -3,11 +3,11 @@
 Full featured Spotify like app written in Swift 5 with MVVM architecture.
 
 
-(https://github.com/antontuzov/muzlit/blob/main/Arts/fill1.gif)
+https://github.com/antontuzov/muzlit/blob/main/Arts/fill1.gif
 
-(https://github.com/antontuzov/muzlit/blob/main/Arts/Muz1.gif)
+https://github.com/antontuzov/muzlit/blob/main/Arts/Muz1.gif
 
-(https://github.com/antontuzov/muzlit/blob/main/Arts/Muz2.gif)
+https://github.com/antontuzov/muzlit/blob/main/Arts/Muz2.gif
 
 
 
