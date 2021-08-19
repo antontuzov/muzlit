@@ -1,17 +1,23 @@
-# Spotify Client (iOS - Swift 5 - 2021)
+### Spotify Client (iOS - Swift 5 - 2021)
 
 Full featured Spotify like app written in Swift 5 with MVVM architecture.
 
 
-https://github.com/antontuzov/muzlit/blob/main/Arts/fill1.gif
 
-https://github.com/antontuzov/muzlit/blob/main/Arts/Muz1.gif
+<p align="center">
+  <img src="Arts/fill1.gif" height="400">
+  <img src="Arts/Muz1.giff" height="400">
+  <img src="Arts/Muz12.giff" height="400">
+&nbsp; &nbsp; &nbsp; &nbsp;
+</p>
 
-https://github.com/antontuzov/muzlit/blob/main/Arts/Muz2.gif
 
 
 
-## Features
+
+
+
+### Features
 - Official Spotify API Use
 - Playlists, Playlist Creation,
 - Browse & Recommended
